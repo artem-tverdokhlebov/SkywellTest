@@ -16,6 +16,10 @@
 		AC4F61071F348FF700D087C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F61051F348FF700D087C0 /* LaunchScreen.storyboard */; };
 		AC82B0D71F34966500471B11 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0D61F34966500471B11 /* WeatherAPI.swift */; };
 		AC82B0D91F34A58200471B11 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0D81F34A58200471B11 /* WeatherDataManager.swift */; };
+		AC82B0DB1F34B1FA00471B11 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0DA1F34B1FA00471B11 /* CarTableViewCell.swift */; };
+		AC82B0DD1F34B66700471B11 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0DC1F34B66700471B11 /* AddCarViewController.swift */; };
+		AC82B0DF1F34BD8C00471B11 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0DE1F34BD8C00471B11 /* PhotoCollectionViewCell.swift */; };
+		AC82B0E21F34C71800471B11 /* CarParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0E11F34C71800471B11 /* CarParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		AC4F61081F348FF700D087C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC82B0D61F34966500471B11 /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		AC82B0D81F34A58200471B11 /* WeatherDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		AC82B0DA1F34B1FA00471B11 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		AC82B0DC1F34B66700471B11 /* AddCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		AC82B0DE1F34BD8C00471B11 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC82B0E11F34C71800471B11 /* CarParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParameters.swift; sourceTree = "<group>"; };
 		C141072B3D640386EA9D5268 /* Pods-SkywellTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkywellTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkywellTest/Pods-SkywellTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D0C2787A392F33BDD215C2E6 /* Pods-SkywellTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkywellTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkywellTest/Pods-SkywellTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +85,7 @@
 			children = (
 				AC4F60F91F348FF700D087C0 /* AppDelegate.swift */,
 				AC4F60FB1F348FF700D087C0 /* CarsViewController.swift */,
+				AC82B0DC1F34B66700471B11 /* AddCarViewController.swift */,
 				AC4F60FD1F348FF700D087C0 /* Main.storyboard */,
 				AC4F61031F348FF700D087C0 /* Assets.xcassets */,
 				AC4F61051F348FF700D087C0 /* LaunchScreen.storyboard */,
@@ -84,8 +93,19 @@
 				AC4F61001F348FF700D087C0 /* SkywellTest.xcdatamodeld */,
 				AC82B0D61F34966500471B11 /* WeatherAPI.swift */,
 				AC82B0D81F34A58200471B11 /* WeatherDataManager.swift */,
+				AC82B0E01F34C6E800471B11 /* Cells */,
+				AC82B0E11F34C71800471B11 /* CarParameters.swift */,
 			);
 			path = SkywellTest;
+			sourceTree = "<group>";
+		};
+		AC82B0E01F34C6E800471B11 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC82B0DE1F34BD8C00471B11 /* PhotoCollectionViewCell.swift */,
+				AC82B0DA1F34B1FA00471B11 /* CarTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		C0EAB4CD9456EB5CD8F91CFC /* Pods */ = {
@@ -221,11 +241,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC82B0DD1F34B66700471B11 /* AddCarViewController.swift in Sources */,
+				AC82B0DF1F34BD8C00471B11 /* PhotoCollectionViewCell.swift in Sources */,
 				AC4F60FC1F348FF700D087C0 /* CarsViewController.swift in Sources */,
 				AC82B0D71F34966500471B11 /* WeatherAPI.swift in Sources */,
+				AC82B0DB1F34B1FA00471B11 /* CarTableViewCell.swift in Sources */,
 				AC4F61021F348FF700D087C0 /* SkywellTest.xcdatamodeld in Sources */,
 				AC4F60FA1F348FF700D087C0 /* AppDelegate.swift in Sources */,
 				AC82B0D91F34A58200471B11 /* WeatherDataManager.swift in Sources */,
+				AC82B0E21F34C71800471B11 /* CarParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

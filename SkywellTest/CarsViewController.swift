@@ -106,7 +106,6 @@ class CarsViewController: UIViewController {
     }
 }
 
-
 extension CarsViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .notDetermined {
@@ -127,5 +126,22 @@ extension CarsViewController: CLLocationManagerDelegate {
             locationManager?.stopUpdatingLocation()
             self.locationManager = nil
         }
+    }
+}
+
+extension CarsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.cars.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: CarTableViewCell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath) as! CarTableViewCell
+        
+        let car: Car = self.cars[indexPath.row]
+        
+        cell.modelLabel.text = car.model
+        cell.priceLabel.text = "\(car.price) $"
+        
+        return cell
     }
 }
