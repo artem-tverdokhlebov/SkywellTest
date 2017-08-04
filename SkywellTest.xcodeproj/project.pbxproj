@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC4F60FA1F348FF700D087C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F60F91F348FF700D087C0 /* AppDelegate.swift */; };
+		AC4F60FC1F348FF700D087C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F60FB1F348FF700D087C0 /* ViewController.swift */; };
+		AC4F60FF1F348FF700D087C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F60FD1F348FF700D087C0 /* Main.storyboard */; };
+		AC4F61021F348FF700D087C0 /* SkywellTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC4F61001F348FF700D087C0 /* SkywellTest.xcdatamodeld */; };
+		AC4F61041F348FF700D087C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F61031F348FF700D087C0 /* Assets.xcassets */; };
+		AC4F61071F348FF700D087C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F61051F348FF700D087C0 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AC4F60F61F348FF700D087C0 /* SkywellTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkywellTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4F60F91F348FF700D087C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC4F60FB1F348FF700D087C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC4F60FE1F348FF700D087C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC4F61011F348FF700D087C0 /* SkywellTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkywellTest.xcdatamodel; sourceTree = "<group>"; };
+		AC4F61031F348FF700D087C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC4F61061F348FF700D087C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC4F61081F348FF700D087C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC4F60F31F348FF700D087C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC4F60ED1F348FF700D087C0 = {
+			isa = PBXGroup;
+			children = (
+				AC4F60F81F348FF700D087C0 /* SkywellTest */,
+				AC4F60F71F348FF700D087C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC4F60F71F348FF700D087C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F60F61F348FF700D087C0 /* SkywellTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC4F60F81F348FF700D087C0 /* SkywellTest */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F60F91F348FF700D087C0 /* AppDelegate.swift */,
+				AC4F60FB1F348FF700D087C0 /* ViewController.swift */,
+				AC4F60FD1F348FF700D087C0 /* Main.storyboard */,
+				AC4F61031F348FF700D087C0 /* Assets.xcassets */,
+				AC4F61051F348FF700D087C0 /* LaunchScreen.storyboard */,
+				AC4F61081F348FF700D087C0 /* Info.plist */,
+				AC4F61001F348FF700D087C0 /* SkywellTest.xcdatamodeld */,
+			);
+			path = SkywellTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC4F60F51F348FF700D087C0 /* SkywellTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC4F610B1F348FF700D087C0 /* Build configuration list for PBXNativeTarget "SkywellTest" */;
+			buildPhases = (
+				AC4F60F21F348FF700D087C0 /* Sources */,
+				AC4F60F31F348FF700D087C0 /* Frameworks */,
+				AC4F60F41F348FF700D087C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkywellTest;
+			productName = SkywellTest;
+			productReference = AC4F60F61F348FF700D087C0 /* SkywellTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC4F60EE1F348FF700D087C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Artem Tverdokhlebov";
+				TargetAttributes = {
+					AC4F60F51F348FF700D087C0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G6CFUV5Q49;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AC4F60F11F348FF700D087C0 /* Build configuration list for PBXProject "SkywellTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC4F60ED1F348FF700D087C0;
+			productRefGroup = AC4F60F71F348FF700D087C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC4F60F51F348FF700D087C0 /* SkywellTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC4F60F41F348FF700D087C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4F61071F348FF700D087C0 /* LaunchScreen.storyboard in Resources */,
+				AC4F61041F348FF700D087C0 /* Assets.xcassets in Resources */,
+				AC4F60FF1F348FF700D087C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC4F60F21F348FF700D087C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4F60FC1F348FF700D087C0 /* ViewController.swift in Sources */,
+				AC4F61021F348FF700D087C0 /* SkywellTest.xcdatamodeld in Sources */,
+				AC4F60FA1F348FF700D087C0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC4F60FD1F348FF700D087C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4F60FE1F348FF700D087C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC4F61051F348FF700D087C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4F61061F348FF700D087C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC4F61091F348FF700D087C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC4F610A1F348FF700D087C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC4F610C1F348FF700D087C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G6CFUV5Q49;
+				INFOPLIST_FILE = SkywellTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artem10919.SkywellTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AC4F610D1F348FF700D087C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G6CFUV5Q49;
+				INFOPLIST_FILE = SkywellTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artem10919.SkywellTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC4F60F11F348FF700D087C0 /* Build configuration list for PBXProject "SkywellTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC4F61091F348FF700D087C0 /* Debug */,
+				AC4F610A1F348FF700D087C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC4F610B1F348FF700D087C0 /* Build configuration list for PBXNativeTarget "SkywellTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC4F610C1F348FF700D087C0 /* Debug */,
+				AC4F610D1F348FF700D087C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC4F61001F348FF700D087C0 /* SkywellTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC4F61011F348FF700D087C0 /* SkywellTest.xcdatamodel */,
+			);
+			currentVersion = AC4F61011F348FF700D087C0 /* SkywellTest.xcdatamodel */;
+			path = SkywellTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC4F60EE1F348FF700D087C0 /* Project object */;
+}
