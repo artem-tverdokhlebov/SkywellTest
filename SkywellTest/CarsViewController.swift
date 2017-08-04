@@ -9,15 +9,30 @@
 import UIKit
 import CoreData
 import CoreLocation
+import SDWebImage
 
 class CarsViewController: UIViewController {
+    let weatherIconCache = SDImageCache(namespace: "weather")
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @IBOutlet weak var weatherIconImageView: UIImageView!
+    
+    @IBOutlet weak var weatherTemperatureLabel: UILabel!
+    
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    @IBOutlet weak var weatherCityLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var context: NSManagedObjectContext {
+        get {
+            return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        }
+    }
     
     var weather: Weather?
     var cars: [Car] = []
     
-    lazy var locationManager: CLLocationManager = {
+    lazy var locationManager: CLLocationManager? = {
         let locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -32,10 +47,12 @@ class CarsViewController: UIViewController {
         let authorizationStatus = CLLocationManager.authorizationStatus()
         
         if authorizationStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
+            locationManager?.requestWhenInUseAuthorization()
         } else {
-            locationManager.startUpdatingLocation()
+            locationManager?.startUpdatingLocation()
         }
+        
+        setupWeatherUI()
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,15 +79,40 @@ class CarsViewController: UIViewController {
             print("ERROR: fetching failed")
         }
     }
+    
+    internal func setupWeatherUI() {
+        getWeatherData()
+        
+        self.weatherCityLabel.text = self.weather?.city
+        self.weatherDescriptionLabel.text = self.weather?.weatherDescription
+        
+        if let temperature = self.weather?.temperature {
+            self.weatherTemperatureLabel.text = String(temperature)
+        } else {
+            self.weatherTemperatureLabel.text = ""
+        }
+        
+        if let weatherIconID = self.weather?.weatherIcon {
+            if let weatherIcon = weatherIconCache.imageFromCache(forKey: weatherIconID) {
+                self.weatherIconImageView.image = weatherIcon
+            } else {
+                self.weatherIconImageView.sd_setImage(with: URL(string: "http://openweathermap.org/img/w/\(weatherIconID).png"), completed: { (iconImage, error, cacheType, url) in
+                    self.weatherIconImageView.image = iconImage
+                    
+                    self.weatherIconCache.store(iconImage, forKey: weatherIconID, toDisk: true)
+                })
+            }
+        }
+    }
 }
 
 
 extension CarsViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
+            locationManager?.requestWhenInUseAuthorization()
         } else {
-            locationManager.startUpdatingLocation()
+            locationManager?.startUpdatingLocation()
         }
     }
     
@@ -78,10 +120,12 @@ extension CarsViewController: CLLocationManagerDelegate {
         if let location = locations.last {
             let weatherAPI = WeatherAPI()
             weatherAPI.getWeatherData(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) {
-                print("done")
+                self.weatherIconCache.clearDisk()
+                self.setupWeatherUI()
             }
             
-            locationManager.stopUpdatingLocation()
+            locationManager?.stopUpdatingLocation()
+            self.locationManager = nil
         }
     }
 }

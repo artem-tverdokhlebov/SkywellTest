@@ -15,6 +15,7 @@
 		AC4F61041F348FF700D087C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F61031F348FF700D087C0 /* Assets.xcassets */; };
 		AC4F61071F348FF700D087C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F61051F348FF700D087C0 /* LaunchScreen.storyboard */; };
 		AC82B0D71F34966500471B11 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0D61F34966500471B11 /* WeatherAPI.swift */; };
+		AC82B0D91F34A58200471B11 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0D81F34A58200471B11 /* WeatherDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AC4F61061F348FF700D087C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC4F61081F348FF700D087C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC82B0D61F34966500471B11 /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		AC82B0D81F34A58200471B11 /* WeatherDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
 		C141072B3D640386EA9D5268 /* Pods-SkywellTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkywellTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkywellTest/Pods-SkywellTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D0C2787A392F33BDD215C2E6 /* Pods-SkywellTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkywellTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkywellTest/Pods-SkywellTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				AC4F61081F348FF700D087C0 /* Info.plist */,
 				AC4F61001F348FF700D087C0 /* SkywellTest.xcdatamodeld */,
 				AC82B0D61F34966500471B11 /* WeatherAPI.swift */,
+				AC82B0D81F34A58200471B11 /* WeatherDataManager.swift */,
 			);
 			path = SkywellTest;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				AC82B0D71F34966500471B11 /* WeatherAPI.swift in Sources */,
 				AC4F61021F348FF700D087C0 /* SkywellTest.xcdatamodeld in Sources */,
 				AC4F60FA1F348FF700D087C0 /* AppDelegate.swift in Sources */,
+				AC82B0D91F34A58200471B11 /* WeatherDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

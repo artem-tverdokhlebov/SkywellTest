@@ -15,7 +15,13 @@ class WeatherAPI {
     let baseURL = "http://api.openweathermap.org/data/2.5"
     private let appID = "6611191635b61604e47a58a34646d1dd"
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var context: NSManagedObjectContext {
+        get {
+            return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        }
+    }
+    
+    lazy var weatherDataManager: WeatherDataManager = WeatherDataManager()
     
     func getWeatherData(latitude: Double, longitude: Double, completion: @escaping () -> Void) {
         let parameters: Parameters = [
@@ -29,8 +35,13 @@ class WeatherAPI {
             case .success(let value):
                 let json = JSON(value)
                 
-                self.setWeatherData(json: json)
+                let city = json["name"].string
+                let description = json["weather"].array?.first?.dictionary?["main"]?.string
+                let icon = json["weather"].array?.first?.dictionary?["icon"]?.string
                 
+                if let temperature = json["main"].dictionary?["temp"]?.double {
+                    self.weatherDataManager.setWeatherData(city: city, temperature: temperature, description: description, icon: icon)
+                }
             case .failure(let error):
                 print(error)
             }
@@ -38,24 +49,6 @@ class WeatherAPI {
             completion()
         }
     }
-    
-    private func setWeatherData(json: JSON) {
-        do {
-            let weatherEntries: [Weather] = try self.context.fetch(Weather.fetchRequest())
-            
-            var weatherEntry: Weather?
-            
-            if weatherEntries.count > 0 {
-                weatherEntry = weatherEntries.first
-            } else {
-                weatherEntry = Weather(context: context)
-            }
-            
-            weatherEntry?.city = json["name"].string
 
-            try context.save()
-        } catch {
-            print("ERROR: fetching failed")
-        }
-    }
+    
 }

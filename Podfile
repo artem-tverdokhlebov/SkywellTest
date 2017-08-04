@@ -7,5 +7,6 @@ target 'SkywellTest' do
 
   # Pods for SkywellTest
   pod 'Alamofire', '~> 4.4'
+  pod 'SDWebImage', '~> 4.0'
   pod 'SwiftyJSON'
 end
