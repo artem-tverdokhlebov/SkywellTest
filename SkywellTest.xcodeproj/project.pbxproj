@@ -20,6 +20,9 @@
 		AC82B0DD1F34B66700471B11 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0DC1F34B66700471B11 /* AddCarViewController.swift */; };
 		AC82B0DF1F34BD8C00471B11 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0DE1F34BD8C00471B11 /* PhotoCollectionViewCell.swift */; };
 		AC82B0E21F34C71800471B11 /* CarParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0E11F34C71800471B11 /* CarParameters.swift */; };
+		AC82B0E61F35E9D800471B11 /* StringLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0E51F35E9D800471B11 /* StringLocalizable.swift */; };
+		AC82B0E91F35E9FF00471B11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC82B0EB1F35E9FF00471B11 /* Localizable.strings */; };
+		AC82B0EE1F35F25400471B11 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82B0ED1F35F25400471B11 /* CarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,12 @@
 		AC82B0DC1F34B66700471B11 /* AddCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		AC82B0DE1F34BD8C00471B11 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC82B0E11F34C71800471B11 /* CarParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParameters.swift; sourceTree = "<group>"; };
+		AC82B0E41F35E2C700471B11 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AC82B0E51F35E9D800471B11 /* StringLocalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringLocalizable.swift; sourceTree = "<group>"; };
+		AC82B0EA1F35E9FF00471B11 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC82B0EC1F35EA0600471B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC82B0ED1F35F25400471B11 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		AC82B0F21F3609F600471B11 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		C141072B3D640386EA9D5268 /* Pods-SkywellTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkywellTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkywellTest/Pods-SkywellTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D0C2787A392F33BDD215C2E6 /* Pods-SkywellTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkywellTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkywellTest/Pods-SkywellTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +95,7 @@
 				AC4F60F91F348FF700D087C0 /* AppDelegate.swift */,
 				AC4F60FB1F348FF700D087C0 /* CarsViewController.swift */,
 				AC82B0DC1F34B66700471B11 /* AddCarViewController.swift */,
+				AC82B0ED1F35F25400471B11 /* CarViewController.swift */,
 				AC4F60FD1F348FF700D087C0 /* Main.storyboard */,
 				AC4F61031F348FF700D087C0 /* Assets.xcassets */,
 				AC4F61051F348FF700D087C0 /* LaunchScreen.storyboard */,
@@ -95,6 +105,8 @@
 				AC82B0D81F34A58200471B11 /* WeatherDataManager.swift */,
 				AC82B0E01F34C6E800471B11 /* Cells */,
 				AC82B0E11F34C71800471B11 /* CarParameters.swift */,
+				AC82B0E51F35E9D800471B11 /* StringLocalizable.swift */,
+				AC82B0EB1F35E9FF00471B11 /* Localizable.strings */,
 			);
 			path = SkywellTest;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = AC4F60ED1F348FF700D087C0;
 			productRefGroup = AC4F60F71F348FF700D087C0 /* Products */;
@@ -181,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4F61071F348FF700D087C0 /* LaunchScreen.storyboard in Resources */,
+				AC82B0E91F35E9FF00471B11 /* Localizable.strings in Resources */,
 				AC4F61041F348FF700D087C0 /* Assets.xcassets in Resources */,
 				AC4F60FF1F348FF700D087C0 /* Main.storyboard in Resources */,
 			);
@@ -245,9 +259,11 @@
 				AC82B0DF1F34BD8C00471B11 /* PhotoCollectionViewCell.swift in Sources */,
 				AC4F60FC1F348FF700D087C0 /* CarsViewController.swift in Sources */,
 				AC82B0D71F34966500471B11 /* WeatherAPI.swift in Sources */,
+				AC82B0EE1F35F25400471B11 /* CarViewController.swift in Sources */,
 				AC82B0DB1F34B1FA00471B11 /* CarTableViewCell.swift in Sources */,
 				AC4F61021F348FF700D087C0 /* SkywellTest.xcdatamodeld in Sources */,
 				AC4F60FA1F348FF700D087C0 /* AppDelegate.swift in Sources */,
+				AC82B0E61F35E9D800471B11 /* StringLocalizable.swift in Sources */,
 				AC82B0D91F34A58200471B11 /* WeatherDataManager.swift in Sources */,
 				AC82B0E21F34C71800471B11 /* CarParameters.swift in Sources */,
 			);
@@ -260,6 +276,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC4F60FE1F348FF700D087C0 /* Base */,
+				AC82B0F21F3609F600471B11 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -268,8 +285,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC4F61061F348FF700D087C0 /* Base */,
+				AC82B0E41F35E2C700471B11 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AC82B0EB1F35E9FF00471B11 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC82B0EA1F35E9FF00471B11 /* ru */,
+				AC82B0EC1F35EA0600471B11 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -279,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -329,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

@@ -18,7 +18,6 @@ enum CarTransmission: String {
 enum CarEngine: String {
     case two = "2.0i.e"
     
-    
     static let allValues = [two]
 }
 

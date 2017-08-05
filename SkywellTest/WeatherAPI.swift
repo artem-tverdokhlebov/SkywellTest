@@ -24,9 +24,13 @@ class WeatherAPI {
     lazy var weatherDataManager: WeatherDataManager = WeatherDataManager()
     
     func getWeatherData(latitude: Double, longitude: Double, completion: @escaping () -> Void) {
+        let language = Bundle.main.preferredLocalizations.first
+        
         let parameters: Parameters = [
             "lat": latitude,
             "lon": longitude,
+            "lang": language ?? "en",
+            "units": "metric",
             "appid": appID
         ]
         
@@ -36,7 +40,7 @@ class WeatherAPI {
                 let json = JSON(value)
                 
                 let city = json["name"].string
-                let description = json["weather"].array?.first?.dictionary?["main"]?.string
+                let description = json["weather"].array?.first?.dictionary?["description"]?.string
                 let icon = json["weather"].array?.first?.dictionary?["icon"]?.string
                 
                 if let temperature = json["main"].dictionary?["temp"]?.double {

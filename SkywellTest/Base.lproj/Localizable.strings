@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  SkywellTest
+
+  Created by Artem Tverdokhlebov on 8/5/17.
+  Copyright © 2017 Artem Tverdokhlebov. All rights reserved.
+*/
+
+"automatic" = "Automatic";
+"manual" = "Manual";
+
+"excellent" = "Excellent";
+"good" = "Good";
+"bad" = "Bad";

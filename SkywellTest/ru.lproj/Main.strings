@@ -1,0 +1,75 @@
+
+/* Class = "UILabel"; text = "Transmission:"; ObjectID = "0BL-vW-kHO"; */
+"0BL-vW-kHO.text" = "Коробка передач:";
+
+/* Class = "UILabel"; text = "Price:"; ObjectID = "219-aM-K9f"; */
+"219-aM-K9f.text" = "Цена:";
+
+/* Class = "UITextView"; text = "Description Example"; ObjectID = "3J5-gt-g8n"; */
+"3J5-gt-g8n.text" = "Пример описания";
+
+/* Class = "UILabel"; text = "Engine:"; ObjectID = "4EE-iQ-c33"; */
+"4EE-iQ-c33.text" = "Двигатель:";
+
+/* Class = "UILabel"; text = "Car:"; ObjectID = "66I-Lk-W4w"; */
+"66I-Lk-W4w.text" = "Машина:";
+
+/* Class = "UIViewController"; title = "Add Car"; ObjectID = "8Ea-LP-Ii8"; */
+"8Ea-LP-Ii8.title" = "Добавить машину";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "B27-yG-ush"; */
+"B27-yG-ush.title" = "Назад";
+
+/* Class = "UILabel"; text = "Car:"; ObjectID = "CSA-h8-7Nh"; */
+"CSA-h8-7Nh.text" = "Машина:";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "GoY-Vf-ruP"; */
+"GoY-Vf-ruP.title" = "Назад";
+
+/* Class = "UIViewController"; title = "Car"; ObjectID = "HFs-L1-cZH"; */
+"HFs-L1-cZH.title" = "Машина";
+
+/* Class = "UILabel"; text = "Condition:"; ObjectID = "LTm-ZH-bM4"; */
+"LTm-ZH-bM4.text" = "Состояние:";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "QSj-fC-dap"; */
+"QSj-fC-dap.title" = "Назад";
+
+/* Class = "UINavigationItem"; title = "Car List"; ObjectID = "UFs-mz-0uo"; */
+"UFs-mz-0uo.title" = "Список машин";
+
+/* Class = "UINavigationItem"; title = "Add Car"; ObjectID = "Vyd-El-ePv"; */
+"Vyd-El-ePv.title" = "Добавить машину";
+
+/* Class = "UILabel"; text = "Transmission:"; ObjectID = "Z1X-d0-6ce"; */
+"Z1X-d0-6ce.text" = "Коробка передач:";
+
+/* Class = "UILabel"; text = "Engine:"; ObjectID = "amb-Bs-tP9"; */
+"amb-Bs-tP9.text" = "Engine:";
+
+/* Class = "UILabel"; text = "Car:"; ObjectID = "cRP-DL-2mc"; */
+"cRP-DL-2mc.text" = "Машина:";
+
+/* Class = "UILabel"; text = "Price:"; ObjectID = "emY-7f-LYU"; */
+"emY-7f-LYU.text" = "Цена:";
+
+/* Class = "UITextView"; text = "Description Example"; ObjectID = "fx2-Ca-0ih"; */
+"fx2-Ca-0ih.text" = "Пример описания";
+
+/* Class = "UIBarButtonItem"; title = "OK"; ObjectID = "gOL-ck-XYD"; */
+"gOL-ck-XYD.title" = "OK";
+
+/* Class = "UINavigationItem"; title = "Car"; ObjectID = "mBl-3Z-SXK"; */
+"mBl-3Z-SXK.title" = "Машина";
+
+/* Class = "UILabel"; text = "Description:"; ObjectID = "sWx-WP-vKG"; */
+"sWx-WP-vKG.text" = "Описание:";
+
+/* Class = "UILabel"; text = "Condition:"; ObjectID = "uU5-gb-o6Y"; */
+"uU5-gb-o6Y.text" = "Состояние:";
+
+/* Class = "UILabel"; text = "Price:"; ObjectID = "vm5-Qn-irH"; */
+"vm5-Qn-irH.text" = "Цена:";
+
+/* Class = "UILabel"; text = "Description:"; ObjectID = "xm5-4c-52q"; */
+"xm5-4c-52q.text" = "Описание:";

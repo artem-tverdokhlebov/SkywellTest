@@ -42,7 +42,6 @@ class CarsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         let authorizationStatus = CLLocationManager.authorizationStatus()
         
@@ -55,29 +54,11 @@ class CarsViewController: UIViewController {
         setupWeatherUI()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    private func getWeatherData() {
-        do {
-            let weather: [Weather] = try context.fetch(Weather.fetchRequest())
-            
-            if weather.count > 0 {
-                self.weather = weather.last
-            }
-        } catch {
-            print("ERROR: fetching failed")
-        }
-    }
-    
-    private func getCarsData() {
-        do {
-            self.cars = try context.fetch(Car.fetchRequest())
-        } catch {
-            print("ERROR: fetching failed")
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.getCarsData()
+        self.tableView.reloadData()
     }
     
     internal func setupWeatherUI() {
@@ -87,7 +68,7 @@ class CarsViewController: UIViewController {
         self.weatherDescriptionLabel.text = self.weather?.weatherDescription
         
         if let temperature = self.weather?.temperature {
-            self.weatherTemperatureLabel.text = String(temperature)
+            self.weatherTemperatureLabel.text = temperature > 0 ? "+" + String(Int(temperature)) : String(Int(temperature))
         } else {
             self.weatherTemperatureLabel.text = ""
         }
@@ -102,6 +83,37 @@ class CarsViewController: UIViewController {
                     self.weatherIconCache.store(iconImage, forKey: weatherIconID, toDisk: true)
                 })
             }
+        }
+    }
+    
+    // MARK: Core Data Models Methods
+    internal func getWeatherData() {
+        do {
+            let weather: [Weather] = try context.fetch(Weather.fetchRequest())
+            
+            if weather.count > 0 {
+                self.weather = weather.last
+            }
+        } catch {
+            print("error")
+        }
+    }
+    
+    internal func getCarsData() {
+        do {
+            self.cars = try context.fetch(Car.fetchRequest())
+        } catch {
+            print("error")
+        }
+    }
+    
+    internal func deleteModel(car: Car) {
+        do {
+            context.delete(car)
+            
+            try context.save()
+        } catch {
+            print("error")
         }
     }
 }
@@ -142,6 +154,37 @@ extension CarsViewController: UITableViewDataSource {
         cell.modelLabel.text = car.model
         cell.priceLabel.text = "\(car.price) $"
         
+        if let photoModel = car.photos?.firstObject as? Photo {
+            let photoModelData = photoModel.data as Data?
+            
+            if let photoModelData = photoModelData, let photoImage = UIImage(data: photoModelData) {
+                cell.carImageView.image = photoImage
+            }
+        }
+        
         return cell
+    }
+}
+
+extension CarsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            self.deleteModel(car: self.cars[indexPath.row])
+            
+            self.getCarsData()
+            tableView.reloadData()
+        }
+        
+        return [deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let carViewController: CarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "carVC") as! CarViewController
+        
+        carViewController.carModel = self.cars[indexPath.row]
+        
+        self.navigationController?.pushViewController(carViewController, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

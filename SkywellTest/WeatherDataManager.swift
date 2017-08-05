@@ -35,7 +35,7 @@ class WeatherDataManager {
             
             try context.save()
         } catch {
-            print("ERROR: fetching failed")
+            print("error")
         }
     }
 }

@@ -9,4 +9,6 @@ target 'SkywellTest' do
   pod 'Alamofire', '~> 4.4'
   pod 'SDWebImage', '~> 4.0'
   pod 'SwiftyJSON'
+  
+  pod 'MBProgressHUD', '~> 1.0.0'
 end
