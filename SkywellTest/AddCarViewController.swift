@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import MobileCoreServices
-import MBProgressHUD
 
 class AddCarViewController: UIViewController {
     var context: NSManagedObjectContext {
